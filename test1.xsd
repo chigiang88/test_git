@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+           elementFormDefault="qualified">
+    <xs:element name="xrfDefs" type="rootType">
+    </xs:element>
+
+    <xs:complexType name="rootType">
+        <xs:sequence>
+            <xs:element name="allElements" type="child_11"/>
+			<xs:element name="AllAlloys" type="AllAlloys_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+
+	<!-- Element -->
+    <xs:complexType name="child_11">
+        <xs:sequence>
+            <xs:element name="Element" type="recordType" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="recordType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="shortName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="fullName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="Kalpha1" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="Kalpha2" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element type="xs:string" name="Kbeta1" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element type="xs:string" name="Lbeta1" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+	
+	<!-- Alloy -->
+    <xs:complexType name="AllAlloys_Type">
+        <xs:sequence>
+            <xs:element name="Alloy" type="Alloy_Type" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Alloy_Type">
+        <xs:sequence>
+            <xs:element type="xs:string" name="shortName" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="uid" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="alloyFamily" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="status" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element name="ElementList" type="ElementList_Type" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+	
+	<xs:complexType name="ElementList_Type">
+        <xs:sequence>
+            <xs:element name="Element" type="Element_1_Type" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+	
+	<xs:complexType name="Element_1_Type">
+        <xs:sequence>
+            <xs:element type="xs:string" name="ID" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="Min" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="Max" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns2:RetrieveWithKeyString xmlns:ns2="urn:xytechsystems.com/XytechAPI"
+			xmlns:ns3="http://schemas.datacontract.org/2004/07/Xytech.MP.API"
+			xmlns:ns4="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+			xmlns:ns5="http://schemas.datacontract.org/2004/07/Xytech.MP.API/Typed">
+			<ns2:credentials>
+				<ns3:DBName>VUB_DEV</ns3:DBName>
+				<ns3:Password>xytechpw</ns3:Password>
+				<ns3:UserID>xytech</ns3:UserID>
+			</ns2:credentials>
+			<ns2:keyString>MoMediaOrder:2130-1</ns2:keyString>
+		</ns2:RetrieveWithKeyString>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

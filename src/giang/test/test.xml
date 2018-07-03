@@ -1,0 +1,150 @@
+
+<!-- GET MoMediaOrderList LIST -->
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns2:Query xmlns:ns2="urn:xytechsystems.com/XytechAPI"
+			xmlns:ns3="http://schemas.datacontract.org/2004/07/Xytech.MP.API"
+			xmlns:ns4="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+			xmlns:ns5="http://schemas.datacontract.org/2004/07/Xytech.MP.API/Typed">
+			<ns2:credentials>
+				<ns3:DBName>VUB_DEV</ns3:DBName>
+				<ns3:Password>xytechpw</ns3:Password>
+				<ns3:UserID>xytech</ns3:UserID>
+			</ns2:credentials>
+			<ns2:className>MoMediaOrderList</ns2:className>
+			<ns2:criteria>
+				<ns3:Criteria>
+					<ns3:CriteriaNode>
+						<ns3:CompareValues>
+							<ns4:string>3031-1</ns4:string>
+						</ns3:CompareValues>
+						<ns3:IsInequality>false</ns3:IsInequality>
+						<ns3:ParamName>wo_no_seq</ns3:ParamName>
+					</ns3:CriteriaNode>
+				</ns3:Criteria>
+				<ns3:MaxRows>1000000000</ns3:MaxRows>
+				<ns3:PageNumber>1</ns3:PageNumber>
+				<ns3:ResultColumns>
+					<ns4:string>wo_no_seq</ns4:string>
+					<ns4:string>wo_desc</ns4:string>
+					<ns4:string>wo_desc_2</ns4:string>
+					<ns4:string>cust_id</ns4:string>
+					<ns4:string>wo_begin_dt</ns4:string>
+					<ns4:string>wo_end_dt</ns4:string>
+					<ns4:string>date_changed</ns4:string>
+					<ns4:string>date_added</ns4:string>
+					<ns4:string>phase_code</ns4:string>
+					<ns4:string>po</ns4:string>
+					<ns4:string>wo_type_no</ns4:string>
+					<ns4:string>ORDR_field_11</ns4:string>
+					<ns4:string>ORDR_field_102</ns4:string>
+					<ns4:string>ORDR_field_103</ns4:string>
+					<ns4:string>ORDR_field_104</ns4:string>
+					<ns4:string>ORDR_field_1</ns4:string>
+				</ns3:ResultColumns>
+			</ns2:criteria>
+		</ns2:Query>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<!-- GET RECIPIENT LIST -->
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns2:Query xmlns:ns2="urn:xytechsystems.com/XytechAPI"
+			xmlns:ns3="http://schemas.datacontract.org/2004/07/Xytech.MP.API"
+			xmlns:ns4="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+			xmlns:ns5="http://schemas.datacontract.org/2004/07/Xytech.MP.API/Typed">
+			<ns2:credentials>
+				<ns3:DBName>VUB_TEST</ns3:DBName>
+				<ns3:Password>xytechpw</ns3:Password>
+				<ns3:UserID>xytech</ns3:UserID>
+			</ns2:credentials>
+			<ns2:className>SysAddressList</ns2:className>
+			<ns2:criteria>
+				<ns3:Criteria>
+					<ns3:CriteriaNode>
+						<ns3:CompareValues>
+							<ns4:string>Y</ns4:string>
+						</ns3:CompareValues>
+						<ns3:IsInequality>false</ns3:IsInequality>
+						<ns3:ParamName>active</ns3:ParamName>
+					</ns3:CriteriaNode>
+					<ns3:CriteriaNode>
+						<ns3:CompareValues>
+							<ns4:string>C</ns4:string>
+						</ns3:CompareValues>
+						<ns3:IsInequality>false</ns3:IsInequality>
+						<ns3:ParamName>list_type</ns3:ParamName>
+					</ns3:CriteriaNode>
+				</ns3:Criteria>
+				<ns3:MaxRows>1000000000</ns3:MaxRows>
+				<ns3:PageNumber>1</ns3:PageNumber>
+				<ns3:ResultColumns>
+					<ns4:string>list_id</ns4:string>
+				</ns3:ResultColumns>
+				<ns3:SortOrder>list_id asc</ns3:SortOrder>
+			</ns2:criteria>
+		</ns2:Query>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns2:RetrieveWithKeyString xmlns:ns2="urn:xytechsystems.com/XytechAPI"
+			xmlns:ns3="http://schemas.datacontract.org/2004/07/Xytech.MP.API"
+			xmlns:ns4="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+			xmlns:ns5="http://schemas.datacontract.org/2004/07/Xytech.MP.API/Typed">
+			<ns2:credentials>
+				<ns3:DBName>VUB_DEV</ns3:DBName>
+				<ns3:Password>xytechpw</ns3:Password>
+				<ns3:UserID>xytech</ns3:UserID>
+			</ns2:credentials>
+			<ns2:keyString>SysAddress:11</ns2:keyString>
+		</ns2:RetrieveWithKeyString>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns2:Query xmlns:ns2="urn:xytechsystems.com/XytechAPI"
+			xmlns:ns3="http://schemas.datacontract.org/2004/07/Xytech.MP.API"
+			xmlns:ns4="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+			xmlns:ns5="http://schemas.datacontract.org/2004/07/Xytech.MP.API/Typed">
+			<ns2:credentials>
+				<ns3:DBName>VUB_DEV</ns3:DBName>
+				<ns3:Password>xytechpw</ns3:Password>
+				<ns3:UserID>xytech</ns3:UserID>
+			</ns2:credentials>
+			<ns2:className>MoMediaOrderList</ns2:className>
+			<ns2:criteria>
+				<ns3:Criteria>
+					<ns3:CriteriaNode>
+						<ns3:MaxValue>2017-10-31T16:59:59Z</ns3:MaxValue>
+						<ns3:MinValue>2017-09-30T17:00Z</ns3:MinValue>
+						<ns3:ParamName>wo_begin_dt</ns3:ParamName>
+					</ns3:CriteriaNode>
+					<ns3:CriteriaNode>
+						<ns3:MaxValue>2017-10-31T16:59:59Z</ns3:MaxValue>
+						<ns3:MinValue>2017-09-30T17:00Z</ns3:MinValue>
+						<ns3:ParamName>wo_end_dt</ns3:ParamName>
+					</ns3:CriteriaNode>
+				</ns3:Criteria>
+				<ns3:ResultColumns>
+					<ns4:string>wo_no_seq</ns4:string>
+					<ns4:string>po</ns4:string>
+					<ns4:string>cust_id</ns4:string>
+					<ns4:string>wo_begin_dt</ns4:string>
+					<ns4:string>wo_end_dt</ns4:string>
+					<ns4:string>phase_code</ns4:string>
+					<ns4:string>ORDR_field_11</ns4:string>
+					<ns4:string>ORDR_field_104</ns4:string>
+					<ns4:string>ORDR_field_1</ns4:string>
+				</ns3:ResultColumns>
+			</ns2:criteria>
+		</ns2:Query>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
